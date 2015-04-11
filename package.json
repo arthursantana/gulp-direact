@@ -1,6 +1,6 @@
 {
   "name": "gulp-direact",
-  "version": "0.0.6.1",
+  "version": "0.0.7",
   "description": "Precompiler that allows usage of React components directly inside markup as custom tags.",
   "main": "direact.js",
   "keywords": [
