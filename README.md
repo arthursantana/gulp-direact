@@ -16,7 +16,7 @@ npm install gulp-direact --save
 <html>
   <head></head>
   <body>
-    <!-- use your components directly inside your markup -->
+    <!-- using my component directly inside my markup -->
     <Clock color="red" />
 
     <!-- including React and my component's source -->
