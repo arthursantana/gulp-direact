@@ -3,6 +3,8 @@ Precompiler that allows usage of React components directly inside markup as cust
 
 [![NPM](https://nodei.co/npm/gulp-direact.png?compact=true)](https://nodei.co/npm/gulp-direact/)
 
+[Example](https://github.com/arthursantana/gulp-direact-example)
+
 ## Markup usage
 ```html
 <!DOCTYPE html>
