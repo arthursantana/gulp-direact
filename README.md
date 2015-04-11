@@ -1,7 +1,7 @@
 # gulp-direact
 Precompiler that allows usage of React components directly inside markup as custom tags.
 
-[![NPM](https://nodei.co/npm/gulp-direact.png?compact=true)](https://nodei.co/npm/gulp-direact/)]
+[![NPM](https://nodei.co/npm/gulp-direact.png?compact=true)](https://nodei.co/npm/gulp-direact/)
 
 ## Markup usage
 ```html
