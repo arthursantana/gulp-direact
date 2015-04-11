@@ -1,14 +1,7 @@
 # gulp-direact
 Precompiler that allows usage of React components directly inside markup as custom tags.
 
-## Installation
-```bash
-npm install gulp-direact --save
-```
-
-<!---
-[![NPM version](https://img.shields.io/npm/v/js-beautify.svg)](https://www.npmjs.com/package/js-beautify)
--->
+[![NPM](https://nodei.co/npm/gulp-direact.png?compact=true)](https://nodei.co/npm/gulp-direact/)]
 
 ## Markup usage
 ```html
