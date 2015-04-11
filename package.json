@@ -1,0 +1,19 @@
+{
+  "name": "gulp-direact",
+  "version": "0.0.1",
+  "description": "Precompiler that allows usage of React components directly inside markup as custom tags.",
+  "main": "direact.js",
+  "keywords": [
+    "react",
+    "custom elements",
+    "directives",
+    "gulpplugin"
+  ],
+  "author": "Arthur Santana <rockslave@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "^3.0.4",
+    "htmlparser2": "^3.8.2",
+    "through2": "^0.6.5"
+  }
+}
