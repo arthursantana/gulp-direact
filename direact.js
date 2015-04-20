@@ -28,13 +28,11 @@ var toBuf = function (string) {
 var parser = new htmlparser.Parser({
    onopentag: function(tagname, attribs){
       if(isComponent(tagname)){
-         console.log(tagname);
          var id = "ReactComponent" + counter; counter++;
          components.push({id: id, name: tagname, att: attribs});
          toBuf("<div id=\"" + id + "\"></div>");
       }
       else {
-         console.log(tagname.toLowerCase());
          toBuf("<" + tagname.toLowerCase() + a2s(attribs) + ">");
       }
    },
