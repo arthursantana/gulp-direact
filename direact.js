@@ -27,8 +27,6 @@ var toBuf = function (string) {
 
 var parser = new htmlparser.Parser({
    onopentag: function(tagname, attribs){
-      console.log(tagname)
-      console.log(attribs)
       if(isComponent(tagname)){
          var id = "ReactComponent" + counter; counter++;
          components.push({id: id, name: tagname, att: attribs});
