@@ -9,7 +9,7 @@ Precompiler that allows usage of React components directly inside markup as cust
 ```html
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head><title>Gulp Direact \o/</title></head>
   <body>
     <!-- using my component directly inside my markup -->
     <Clock color="red" />
@@ -26,6 +26,7 @@ Precompiler that allows usage of React components directly inside markup as cust
 var gulp = require('gulp');
 var react = require('gulp-react');
 var direact = require('gulp-direact');
+var prettify = require('gulp-prettify');
 
 var path = {
    HTML: 'src/index.html',
@@ -44,6 +45,7 @@ gulp.task('transformJS', function(){
 gulp.task('transformHTML', function(){
    gulp.src(path.HTML)
    .pipe(direact())
+   .pipe(prettify())                                          
    .pipe(gulp.dest(path.DEST));
 });
 

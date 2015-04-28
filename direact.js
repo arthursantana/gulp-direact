@@ -1,11 +1,10 @@
 var htmlparser = require("htmlparser2");
 var through = require('through2');
 var gutil = require('gulp-util');
-var PluginError = gutil.PluginError;
 
 var result;
-var counter = 0;
-var components = [];
+var counter;
+var components;
 
 var tags = ["!doctype", "a", "abbr", "acronym", "address", "applet", "area", "article", "aside", "audio", "b", "base", "basefont", "bdi", "bdo", "big", "blockquote", "body", "br", "button", "canvas", "caption", "center", "cite", "code", "col", "colgroup", "command", "datalist", "dd", "del", "details", "dfn", "dir", "div", "dl", "dt", "em", "embed", "fieldset", "figcaption", "figure", "font", "footer", "form", "frame", "frameset", "h1", "h2", "h3", "h4", "h5", "h6", "head", "header", "hgroup", "hr", "html", "i", "iframe", "img", "input", "ins", "kbd", "keygen", "label", "legend", "li", "link", "map", "mark", "menu", "meta", "meter", "nav", "noframes", "noscript", "object", "ol", "optgroup", "option", "output", "p", "param", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "script", "section", "select", "small", "source", "span", "strike", "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "textarea", "tfoot", "th", "thead", "time", "title", "tr", "track", "tt", "u", "ul", "var", "video", "wbr"];
 
@@ -73,12 +72,15 @@ var parser = new htmlparser.Parser({
 });
 
 module.exports = function () {
+   counter = 0;
+   components = [];
+
    return through.obj(function (chunk, enc, callback) {
       if (gutil.isNull(chunk)) {
          callback(null, chunk);
       }
       if (gutil.isStream(chunk)) {
-         throw new PluginError(PLUGIN_NAME, 'Streams not supported.');
+         throw new gutil.PluginError(PLUGIN_NAME, 'Streams not supported.');
       }
 
       // isBuffer() == true
