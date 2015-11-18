@@ -68,6 +68,7 @@ var parser = new htmlparser.Parser({
    }
 }, {
    lowerCaseTags: false,
+   lowerCaseAttributeNames: false,
    recognizeSelfClosing: true,
 });
 
